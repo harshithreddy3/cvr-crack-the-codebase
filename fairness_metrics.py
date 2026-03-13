@@ -6,11 +6,15 @@ def engine_run(data):
     
     for idx_i in range(len(data)):
         i = data[idx_i]
+        if i['Status']=='Inactive':
+            continue
                 
-        for idx_j in range(len(data)):
+        for idx_j in range(idx_i+1,len(data)):
             j = data[idx_j]
+            if j['Status']=='Inactive':
+                continue
             
-            if i['ID'] != j['ID'] and i['Demographic_Group'] != j['Demographic_Group']:
+            if i['Demographic_Group'] != j['Demographic_Group']:
                 
                 val_i = int(i['AI_Score'])
                 val_j = int(j['AI_Score'])
