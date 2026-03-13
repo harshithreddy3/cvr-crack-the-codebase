@@ -1,8 +1,8 @@
 # Crack the Codebase - Pipeline Entry
 import data_cleaner
 import fairness_metrics
-
-SOURCE_FILE = "C:/Users/Narasimha/Downloads/cvr_event_220CM/dataset.csv"
+import report_generator
+SOURCE_FILE = "cvr-crack-the-codebase\dataset.csv"
 
 def execute_pipeline():
     print("Initializing Applicant Pipeline...")
